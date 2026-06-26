@@ -1,0 +1,25 @@
+{
+  "name": "mailim",
+  "version": "0.1.0",
+  "description": "Instant messaging over email",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "server": "node server/index.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "cd client && npm run dev",
+    "build": "cd client && npm run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "imapflow": "^1.0.174",
+    "mailparser": "^3.9.12",
+    "nodemailer": "^6.9.16",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
